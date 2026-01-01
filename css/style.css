@@ -607,6 +607,9 @@ button {
     color: white;
     background-color: #fe0000;
     padding: 12px;
+    max-width: 100%;
+    width: 20%;
+   
 }
 .blog_img img {
     width: 100%;
@@ -677,7 +680,7 @@ button {
     padding: 10px 30px;
     /* horizontal padding */
     /* fixed width */
-    max-width: 30%;
+    max-width: 100%;
     /* allow auto width */
     display: block;
     margin: 10px auto 0 auto;

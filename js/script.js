@@ -1,6 +1,6 @@
 //this file is for subscription for getting updates on email
 $(document).ready(function() {
-    $(".read_more").click(function(e) {
+    $("#sendRequest").click(function(e) {
         e.preventDefault(); // prevent page reload
 
         var email = $("#userEmail").val();

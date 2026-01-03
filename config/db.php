@@ -1,15 +1,28 @@
 <?php
-// Database configuration
-$servername = "localhost";
-$username = "root";  // XAMPP default
-$password = "";      // XAMPP default
-$dbname = "mywebsite_db";
+// ---------------------------------------------
+// STEP 1: Replace the following details with your InfinityFree database credentials
+// You can find these in your InfinityFree Control Panel → MySQL Databases
+// ---------------------------------------------
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$servername = "sql202.infinityfree.com"; // <- Yahan "Host" ka naam likho, dashboard me milega
+$username   = "if0_40804697";           // <- Yahan "MySQL Username" likho
+$password   = "SyedaTayyeba29";              // <- Yahan "MySQL Password" likho
+$database   = "mywebsite_db"; // <- Yahan "Database Name" likho
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// ---------------------------------------------
+// STEP 2: Create connection
+// ---------------------------------------------
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// ---------------------------------------------
+// STEP 3: Check connection
+// Agar connection fail ho to exact error show ho jayega
+// ---------------------------------------------
+if (!$conn) {
+    die("Database connection failed: " . mysqli_connect_error());
 }
-?>
+
+// ---------------------------------------------
+// STEP 4: Now you can use $conn for your queries
+// Example: SELECT, INSERT, UPDATE, DELETE etc.
+// ---------------------------------------------
